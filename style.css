@@ -1,3 +1,11 @@
 p{
     font-size: large;
 }
+.containear{
+    display: grid;
+    grid-template-columns: 20px 50px 100px;
+    background-color: aquamarine;
+}
+.grid-item{
+    background-color: beige;
+}
