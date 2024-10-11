@@ -1,0 +1,22 @@
+.profile{
+    width: 300px;
+    height: 300px;
+    background-image: url(https://webstockreview.net/images/profile-icon-png-9.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+    position: relative;
+}
+.notify{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+}
