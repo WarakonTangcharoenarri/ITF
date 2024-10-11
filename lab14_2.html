@@ -13,9 +13,10 @@
     </div>
 
     <h1 id="user">Username, ok</h1>
-    <label>Set Username</label><input type="text" id="name"><button onclick="setName()">set</button><br>
+    <label>Set The Username</label><input type="text" id="name"><button onclick="setName()">set</button><br>
     <label>Set img</label><input type="text"><button onclick="setimg()">set</button><br>
     <label>Set para</label><input type="text"><button onclick="addParagraph()">set</button>
+    <button id="export" onclick="exportCSV()">Export</button>
     
     <div class="container">
         
@@ -25,7 +26,7 @@
         const username = document.getElementById("user");
         const input = document.getElementById("name");
         const profile = document.getElementById("profile");
-        const newdiv =  document.getElementsByClassName("container")
+        const newdiv =  document.getElementsByClassName("container")[0];
 
     
 
@@ -39,11 +40,24 @@
         }
 
         function addParagraph(){
-            const newpara = document.createElement("p")
-            newpara.textContent = "new paragraph"
+            const newpara = document.createElement("p");
+            newpara.textContent = "new paragraph";
             newdiv.appendChild(newpara);
 
         }
+
+        function saveCSV() {
+            const csvContent = phonenumber.map(row => row.join(",")).join("\n"); // Convert array to CSV string
+                const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+                const link = document.createElement("a");
+                const url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", "data.csv");
+                link.style.visibility = "hidden";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+        };
 
     </script>
 
