@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <h1 >
+        <a id="usernameLink" href="https://github.com/WarakonTangcharoenarri" target="_blank" >
+            วรากร ตั้งเจริญอารีย์ 67070157
+        </a>
+    </h1>
+
+    <div class="profile" id="profile">
+        <div class="notify"><p>1</p></div>
+    </div>
+
+    <div class="form-group">
+        <label>Set The Username</label>
+        <input type="text" id="name" placeholder="Enter username" >
+        <button onclick="setName()">SET</button>
+    </div>
+
+    <div class="form-group">
+        <label>Set the profile image URL</label>
+        <input type="text" id="img" placeholder="Name">
+        <button onclick="setimg()">SET</button>
+        
+    </div>
+    <h2>Phone Number List</h2>
+    <div class="form-group">
+        <input type="text" id="name_Tal" placeholder="Name">
+        <input type="text" id="tal" placeholder="Tel">
+        <button onclick="addParagraph()">ADD</button>
+        <button onclick="saveCSV()">EXPORT</button>
+    </div>
+
+    <div class="container">
+        <table id="phoneTable">
+            <thead>
+                <tr>
+                    <th>No.</th> <!-- หัวสำหรับลำดับ -->
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- ข้อมูลจะถูกเพิ่มที่นี่ -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>

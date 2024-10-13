@@ -2,9 +2,9 @@ html, body {
     height: 100%;
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: flex-start; /* แก้ไขเป็น flex-start เพื่อจัดให้อยู่ด้านบน */
+    align-items: center; /* จัดให้เนื้อหาอยู่กลางแนวนอน */
 }
 
 
@@ -16,12 +16,13 @@ html, body {
     background-size: cover;
     border-radius: 50%;
     position: relative;
+    margin: 15px;
 }
 
 .notify {
     width: 30px;
     height: 30px;
-    background-color: red;
+    background-color:lightcoral;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,4 +30,100 @@ html, body {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+h1 ,label{
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+h2{
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* จัดให้แต่ละกลุ่มเป็นบรรทัดใหม่ */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* เพิ่มช่องว่างระหว่างแต่ละกลุ่ม */
+}
+
+/* จัดระยะห่างระหว่าง label และ input */
+.form-group label {
+    font-size: 15px;
+    margin-right: 10px;
+    min-width: 150px; /* กำหนดความกว้างขั้นต่ำให้กับ label */
+}
+
+/* กำหนดลักษณะของ input */
+input {
+    background-color: #f0f0f0;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    width: 250px;
+    box-sizing: border-box; 
+}
+
+/* กำหนดสีของ placeholder */
+input::placeholder {
+    color: #888;
+}
+
+/* กำหนดลักษณะของ button */
+button {
+    background-color: #005bf7; /* สีพื้นฐาน */
+    color: white; /* สีข้อความ */
+    border: none; /* ไม่มีขอบ */
+    padding: 10px 20px; /* ระยะห่างภายใน */
+    text-align: center; /* จัดกลางข้อความ */
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+    display: inline-block; /* ทำให้ปุ่มสามารถอยู่ติดกันได้ */
+    font-size: 16px; /* ขนาดข้อความ */
+    margin: 4px 2px; /* ระยะห่างระหว่างปุ่ม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อ hover */
+    border-radius: 5px; /* มุมโค้ง */
+    transition: background-color 0.3s, transform 0.3s; /* เปลี่ยนแปลงพื้นหลังและขนาดอย่างนุ่มนวล */
+}
+
+button:hover {
+    background-color: #45a049; /* เปลี่ยนสีเมื่อ hover */
+    transform: scale(1.05); /* ขยายขนาดเมื่อ hover */
+}
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-top: 1px solid #ccc; /* เส้นแบ่งแนวนอน */
+    border-bottom: 1px solid #ccc; /* เส้นแบ่งแนวนอน */
+    border-right: none; /* ลบเส้นแบ่งแนวตั้งด้านขวา */
+    color: #676767;
+}
+
+th {
+    background-color: #f2f2f2;
+
+}
+
+#usernameLink {
+    text-decoration: none; /* ลบขีดเส้นใต้เริ่มต้น */
+    color: black; /* สีเริ่มต้น */
+    transition: color 0.3s; /* เพิ่มการเปลี่ยนสีอย่างนุ่มนวล */
+}
+
+#usernameLink:hover {
+    color: deepskyblue; /* เปลี่ยนสีเมื่อ hover */
+    text-decoration: underline; /* ขีดเส้นใต้เมื่อ hover */
 }
