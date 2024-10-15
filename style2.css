@@ -5,8 +5,8 @@ html, body {
     flex-direction: column;
     justify-content: flex-start; /* แก้ไขเป็น flex-start เพื่อจัดให้อยู่ด้านบน */
     align-items: center; /* จัดให้เนื้อหาอยู่กลางแนวนอน */
+    
 }
-
 
 .profile {
     width: 183px;
@@ -16,7 +16,6 @@ html, body {
     background-size: cover;
     border-radius: 50%;
     position: relative;
-    margin: 15px;
 }
 
 .notify {
@@ -32,7 +31,7 @@ html, body {
     right: 0;
 }
 
-h1 ,label{
+h1 ,label , a{
     font-family: 'Arial', sans-serif;
     font-size: 24px;
     font-weight: bold;
